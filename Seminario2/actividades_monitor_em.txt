@@ -1,0 +1,47 @@
+Compila y ejecuta monitor_em.cpp. Veras que ejecuta las
+funciones test_1,test_2 y test_3, cada una de ellas usa
+uno de los tres monitores descritos.
+
+Salida1:
+Monitor contador (sin exclusión mutua):
+
+  valor esperado == 20000
+  valor obtenido == 17350
+
+Monitor contador (EM con acceso directo a cerrojos):
+
+  valor esperado == 20000
+  valor obtenido == 20000
+
+Monitor contador (EM con guardas de cerrojo):
+
+  valor esperado == 20000
+  valor obtenido == 20000
+
+Salida2:
+Monitor contador (sin exclusión mutua):
+
+  valor esperado == 20000
+  valor obtenido == 17424
+
+Monitor contador (EM con acceso directo a cerrojos):
+
+  valor esperado == 20000
+  valor obtenido == 20000
+
+Monitor contador (EM con guardas de cerrojo):
+
+  valor esperado == 20000
+  valor obtenido == 20000
+
+
+Prueba a quitar el unlock de MContador2::incrementa.
+Describe razonadamente que ocurre.
+
+Salida sin unlock:
+Monitor contador (sin exclusión mutua):
+
+  valor esperado == 20000
+  valor obtenido == 14799
+
+La ejecución se queda bloqueada ya que no se puede volver a entrar a leer o incrementar el valor ya que el cerrojo no ha sido liberado.

@@ -1,0 +1,21 @@
+Variables necesarias
+-------------------------------------------------------------------------------------------------------------------------
+
+const int num_items = 50 ,   // número de items a producir/consumir
+	       tam_vec   = 20 ;   // tamaño del buffer
+unsigned  cont_prod[num_items] = {0}, // contadores de verificación: producidos
+          cont_cons[num_items] = {0}; // contadores de verificación: consumidos
+int vec [tam_vec]; // vector que se usa como buffer entra las hebras consumidora y productora para permitir concurrencia
+
+int primera_ocupada = 0; // posición siguiente a leer, cuando se lee se aumenta en 1 y se le hace módulo tam_vec 
+                         // para almacenar la siguiente posición a leer;
+int primera_libre = 0; // posición siguiente a escribir, cuando se escribe se aumenta en 1 y se le hace módulo tam_vec 
+                       // para almacenar la siguiente posición a escribir;
+
+
+Uso de semáforos
+--------------------------------------------------------------------------------------------------------------------------
+
+Se usan 2 semáforos y su valor se corresponde con las posiciones libres y ocupadas respectivamente del vector buffer, inicialmente tam_vec y 0.
+Si hay posiciones libres la hebra productora podrá ejcutarse, si no quedará en espera hasta que la hebra consumidora consuma un dato y quede una posición libre.
+Si hay posiciones ocupadas la hebra consumidora las consumirá, si no esperará a que la productora produzca un dato y quede una posición ocupada.

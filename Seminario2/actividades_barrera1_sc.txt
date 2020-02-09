@@ -1,0 +1,26 @@
+1. La hebra que entra la última al método cita (la hebra
+señaladora) es siempre la primera en salir de dicho método.
+
+Las hebras esperan hasta que todas hayan llegado al método cita, y cuando la última llega esta hace un signal a todas las demás, como el monitor es Señalar y Continuar la última que llega después de señalar a todas sigue su ejecución y es la primera en salir.
+
+
+2. El orden en el que las hebras señaladas logran entrar de nuevo
+al monitor no siempre coincide con el orden de salida de wait
+(se observa porque los números de orden de entrada no
+aparecen ordenados a la salida).
+
+El estándar C++11 no especifica ninguna política concreta para
+seleccionar la hebra que reanuda la ejecución. Por lo que en esta implementación no podemos suponer que van a entrar en orden.
+
+
+3. El constructor de la clase no necesita ejecutarse en exclusión
+mutua.
+
+Hasta que el monitor no está construido no se va a poder ejecutar otros métodos por lo que solo se va poder estar ejecutando el constructor y ya se respeta la exclusión mutua del monitor.
+
+
+Prueba a usar notify_all en lugar de notify_one. Describe
+razonadamente en tu portafolio si se observa o no algún cambio
+importante en la traza del programa.
+
+No se observa ningún cambio, ya que el orden de los notify_one da igual por lo respondido en la cuestión 2, así que poner todas las hebras a esperar a la vez o una por una tendrá el mismo resultado

@@ -1,0 +1,33 @@
+Pseudo-código del monitor:
+
+monitor Barberia:
+	Colas condición:
+		durmiendo, salaDeEspera, sillaDeCorte
+	Métodos exportados:
+		cortarPelo(num_cliente :int) :void
+		begin
+			Si el barbero está en durmiendo el cliente int lo despierta. (durmiendo.signal)
+			Mientras el barbero esté trabajando el cliente espera en la salaDeEspera (salaDeEspera.wait)
+			
+			El cliente se sienta en la silla de corte y espera a que le corten el pelo (sillaDeCorte.wait), despúes sale de la barbería.
+		end
+		
+		siguienteCliente() :void
+		begin
+			Mientras no haya un cliente el barbero espera en durmiendo. (durmiendo.wait)
+			
+			Llama al siguiente cliente en la salaDeEspera (salaDeEspera.signal)
+		end
+		
+		finCliente() :void
+		begin
+			El barbero termina y le dice al cliente que se puede ir de la sillaDeCorte (sillaDeCorte.signal)
+		end
+
+Variables condición:
+
+durmiendo, condición de espera asociada -> salaDeEspera.empty(), que no haya clientes. Usada por hebra_barbero y hebra_cliente.
+
+salaDeEspera, condición de espera asociada -> durmiendo.empty(), que el barbero esté trabajando. Usada por hebra_barbero y hebra_cliente.
+
+sillaDeCorte, condición de espera asociada -> durmiendo.empty() y sillaDeCorte.empty(). Usada por hebra_barbero y hebra_cliente.

@@ -1,0 +1,91 @@
+Variable permanente:
+
+ingr_disp de tipo int. Representa el ingrediente disponible en el mostrador. Sus valores posibles son 0, 1 y 2 para indicar que está disponible ese nº de ingrediente o -1 para indicar que no hay ningún ingrediente disponible.
+
+
+Colas condición:
+
+mostradorVacio. 		 Condición de espera (ingr_disp != 1)
+ingredienteProducido[0]. Condición de espera (ingr_disp != 0)
+ingredienteProducido[1]. Condición de espera (ingr_disp != 1)
+ingredienteProducido[2]. Condición de espera (ingr_disp != 2)
+
+
+Pseudo-código de los procedicimientos del monitor:
+	ObtenerIngrediente (num_fumador :int) :void
+	begin
+		Si no está disponible el ingrediente del fumador num_fumador
+			cola[num_fumador].wait
+	
+		Indicar que el ingrediente se ha retirado
+		ingr_disp := -1
+		cola2.signal()
+	end
+	
+	ponerIngrediente(ingrediente :int) :void
+	begin
+		ingr_disp := ingrediente;
+		Indicar que se ha puesto el ingrediente
+		cola[ingrediente].signal();
+	end
+
+	esperarRecogidaIngrediente() :void
+	begin
+		if (ingr_disp != -1) //Si hay ingrediente puesto
+			cola2.wait();	 //estanquero espera
+	end
+
+Salida del programa:
+
+Puesto ingrediente 2
+Retirado ingrediente 2
+Fumador 2  : empieza a fumar (63 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Puesto ingrediente 0
+Retirado ingrediente 0
+Fumador 0  : empieza a fumar (174 milisegundos)
+Puesto ingrediente 2
+Retirado ingrediente 2
+Fumador 2  : empieza a fumar (27 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Puesto ingrediente 2
+Retirado ingrediente 2
+Fumador 2  : empieza a fumar (183 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Puesto ingrediente 2
+Retirado ingrediente 2
+Fumador 2  : empieza a fumar (171 milisegundos)
+Puesto ingrediente 2
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Retirado ingrediente 2
+Fumador 2  : empieza a fumar (155 milisegundos)
+Puesto ingrediente 0
+Retirado ingrediente 0
+Fumador 0  : empieza a fumar (25 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Puesto ingrediente 1
+Retirado ingrediente 1
+Fumador 1  : empieza a fumar (100 milisegundos)
+Puesto ingrediente 2
+Retirado ingrediente 2
+Fumador 2  : empieza a fumar (101 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Puesto ingrediente 0
+Retirado ingrediente 0
+Fumador 0  : empieza a fumar (55 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Puesto ingrediente 1
+Retirado ingrediente 1
+Fumador 1  : empieza a fumar (27 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Puesto ingrediente 0
+Retirado ingrediente 0
+Fumador 0  : empieza a fumar (113 milisegundos)
+Puesto ingrediente 2
+Retirado ingrediente 2
+Fumador 2  : empieza a fumar (30 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Fumador 0  : termina de fumar, comienza espera de ingrediente.

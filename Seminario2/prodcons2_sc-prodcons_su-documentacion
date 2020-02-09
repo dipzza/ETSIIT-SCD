@@ -1,0 +1,5 @@
+¿Por que es necesario comprobar la condición de un wait en un bucle while si el monitor es SC?
+
+No podemos asegurar que la condición por la que se realizo un wait no sigue siendo cierta cuando el procedimiento que llamo al wait continua. Al ser un monitor señalar y continuar, el procedimiento señalador seguira su ejecución y después pueden entrar otros procedimientos antes que el que llamo al wait, todos estas ejecuciones pueden hacer la condición verdadera y por eso es necesario comprobarla en un bucle while.
+
+En el caso de la semántica SU no es necesario poner las operaciones wait dentro de un bucle while ya que cuando se da la condición para hacer un signal se ejecuta primero el código despúes del wait. Al no entrar otro procesos antes podemos asegurar que la condición sigue siendo cierta a diferencia de la semántica SC.

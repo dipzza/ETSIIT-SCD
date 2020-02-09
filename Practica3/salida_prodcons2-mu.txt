@@ -1,0 +1,120 @@
+Productor 1 ha producido valor 6
+Productor 1 va a enviar valor 6
+Buffer ha recibido valor 6
+Buffer va a enviar valor 6
+Consumidor 0 ha recibido valor 6
+Productor 1 ha producido valor 7
+Productor 1 va a enviar valor 7
+Buffer ha recibido valor 7
+Buffer va a enviar valor 7
+Consumidor 1 ha recibido valor 7
+Productor 0 ha producido valor 1
+Productor 0 va a enviar valor 1
+Productor 3 ha producido valor 16
+Productor 3 va a enviar valor 16
+Buffer ha recibido valor 16
+Buffer va a enviar valor 16
+Buffer ha recibido valor 1
+Buffer va a enviar valor 1
+Consumidor 2 ha recibido valor 16
+Consumidor 3 ha recibido valor 1
+Productor 2 ha producido valor 11
+Productor 2 va a enviar valor 11
+Buffer ha recibido valor 11
+Buffer va a enviar valor 11
+Consumidor 4 ha recibido valor 11
+Productor 1 ha producido valor 8
+Productor 1 va a enviar valor 8
+Buffer ha recibido valor 8
+Productor 0 ha producido valor 2
+Productor 0 va a enviar valor 2
+Buffer ha recibido valor 2
+Productor 3 ha producido valor 17
+Productor 3 va a enviar valor 17
+Buffer ha recibido valor 17
+Productor 0 ha producido valor 3
+Productor 0 va a enviar valor 3
+Buffer ha recibido valor 3
+Productor 3 ha producido valor 18
+Productor 3 va a enviar valor 18
+Buffer ha recibido valor 18
+Consumidor ha consumido valor 6
+Consumidor 0 ha recibido valor 8
+Buffer va a enviar valor 8
+Productor 2 ha producido valor 12
+Productor 2 va a enviar valor 12
+Buffer ha recibido valor 12
+Productor 1 ha producido valor 9
+Productor 1 va a enviar valor 9
+Buffer ha recibido valor 9
+Productor 3 ha producido valor 19
+Productor 3 va a enviar valor 19
+Buffer ha recibido valor 19
+Productor 0 ha producido valor 4
+Productor 0 va a enviar valor 4
+Buffer ha recibido valor 4
+Productor 3 ha producido valor 20
+Productor 3 va a enviar valor 20
+Buffer ha recibido valor 20
+Consumidor ha consumido valor 7
+Consumidor 1 ha recibido valor 2
+Buffer va a enviar valor 2
+Productor 0 ha producido valor 5
+Productor 0 va a enviar valor 5
+Buffer ha recibido valor 5
+Consumidor ha consumido valor 1
+Consumidor 3 ha recibido valor 17
+Buffer va a enviar valor 17
+Productor 2 ha producido valor 13
+Productor 2 va a enviar valor 13
+Buffer ha recibido valor 13
+Consumidor ha consumido valor 16
+Consumidor 2 ha recibido valor 3
+Buffer va a enviar valor 3
+Productor 1 ha producido valor 10
+Productor 1 va a enviar valor 10
+Buffer ha recibido valor 10
+Consumidor ha consumido valor 11
+Consumidor 4 ha recibido valor 18
+Buffer va a enviar valor 18
+Consumidor ha consumido valor 8
+Buffer va a enviar valor 12
+Consumidor 0 ha recibido valor 12
+Buffer ha recibido valor 14
+Productor 2 ha producido valor 14
+Productor 2 va a enviar valor 14
+Consumidor ha consumido valor 17
+Consumidor 3 ha recibido valor 9
+Buffer va a enviar valor 9
+Productor 2 ha producido valor 15
+Productor 2 va a enviar valor 15
+Buffer ha recibido valor 15
+Consumidor ha consumido valor 3
+Buffer va a enviar valor 19
+Consumidor 2 ha recibido valor 19
+Consumidor ha consumido valor 2
+Consumidor 1 ha recibido valor 4
+Buffer va a enviar valor 4
+Consumidor ha consumido valor 12
+Consumidor 0 ha recibido valor 20
+Buffer va a enviar valor 20
+Consumidor ha consumido valor 18
+Buffer va a enviar valor 5
+Consumidor 4 ha recibido valor 5
+Consumidor ha consumido valor 19
+Consumidor 2 ha recibido valor 13
+Buffer va a enviar valor 13
+Consumidor ha consumido valor 9
+Consumidor 3 ha recibido valor 10
+Buffer va a enviar valor 10
+Consumidor ha consumido valor 4
+Consumidor 1 ha recibido valor 14
+Buffer va a enviar valor 14
+Consumidor ha consumido valor 5
+Consumidor 4 ha recibido valor 15
+Buffer va a enviar valor 15
+Consumidor ha consumido valor 20
+Consumidor ha consumido valor 13
+Consumidor ha consumido valor 14
+Consumidor ha consumido valor 10
+Consumidor ha consumido valor 15

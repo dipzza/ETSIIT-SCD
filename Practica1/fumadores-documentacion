@@ -1,0 +1,19 @@
+Semáforos utilizados:
+    
+    mostr_vacio:
+    
+        Utilidad. Controla que desde la última producción de un ingrediente este se halla retirado
+        
+        Valor inicial. 1, ya que se empieza produciendo
+        
+        Hebras. La hebra_estanquero hace sem_wait sobre este semáforo
+                Las 3 hebra_fumador hacen sem_signal sobre este semáforo cuando retiran el ingrediente.
+                
+    ingr_disp[3]:
+    
+        Utilidad. Controlan si las hebra_fumador pueden ejecutarse si el ingrediente que necesita cada fumador está producido
+        
+        Valor inicial. 0
+        
+        Hebras. La hebra_estanquero hace sem_signal sobre el semáforo del ingrediente que produce, ej.: si produce el ingrediente 2, hace sem_signal sobre ingr_disp[2]
+                La hebra_fumador[i] hace sem_wait sobre ingr_disp[i]

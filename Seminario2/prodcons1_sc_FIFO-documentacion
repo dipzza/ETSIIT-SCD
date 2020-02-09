@@ -1,0 +1,7 @@
+Compara los cambios con la implementación LIFO:
+
+La lectura del buffer se hará sobre la primera celda ocupada guardada en la posición primera_ocupada, después de leer habrá que actualizar primera_ocupada a la siguiente posición del buffer. (primera_ocupada = (primera_ocupada + 1) % num_celdas_total)
+
+Al escribir en el buffer se hará en la primera celda libre guardada en la posición primera_libre, después de escribir habrá que actualizar primera_libre a la siguiente posición del buffer.
+
+Las condiciones de espera respecto a la implementación LIFO son las mismas, solo que ahora la variable primera_libre no coincide con el número de celdas ocupadas, por lo que necesitamos una nueva variable num_celdas_ocupadas con valor inicial 0 y que se incremente al escribir y decremente al leer.

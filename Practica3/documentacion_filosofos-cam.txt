@@ -1,0 +1,3 @@
+La solución consiste en implementar otro proceso camarero que solo permita 4 filósofos sentados en la mesa y solicitando tenedores a la vez. Para esto los filósofos piden de forma síncrona sentarse en la mesa y después de coger, comer y devolver los tenedores piden levantarse. Estas peticiones se realizan con 2 etiquetas distintas.
+
+El camarero lleva la cuenta de los camareros sentados y la incrementa o decrementa según la etiqueta del mensaje que recibe. Acepta mensajes con cualquier etiqueta si hay menos de 4 camareros sentados, en caso distinto, solo acepta los mensajes de levantarse.
